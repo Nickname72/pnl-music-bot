@@ -13,7 +13,7 @@ from telebot import types
 # НАЛАШТУВАННЯ
 # ==========================================================
 
-TOKEN = os.getenv("TOKEN", "").strip()
+TOKEN = os.getenv("8984472073:AAEQGwL0C2N4GfMEQaNnfiC2KZxi1-xPlGA", "").strip()
 
 # ID головного адміністратора
 ADMIN_ID = 8423060500

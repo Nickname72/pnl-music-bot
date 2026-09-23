@@ -19,7 +19,7 @@ TOKEN = os.getenv("8984472073:AAEQGwL0C2N4GfMEQaNnfiC2KZxi1-xPlGA", "").strip()
 ADMIN_ID = 8423060500
 
 # Пароль адмін-панелі
-ADMIN_PASSWORD = "7243403"
+ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD", "").strip()
 
 # Блокування за мат
 BAD_WORD_BAN_MINUTES = 5
@@ -33,7 +33,12 @@ DB_NAME = "bot.db"
 
 if not TOKEN:
     raise RuntimeError(
-        "Не знайдено змінну TOKEN. Додай TOKEN у Environment Variables Koyeb."
+        "Не знайдено BOT_TOKEN. Додай BOT_TOKEN у Environment Variables Render."
+    )
+
+if not ADMIN_PASSWORD:
+    raise RuntimeError(
+        "Не знайдено ADMIN_PASSWORD. Додай ADMIN_PASSWORD у Environment Variables Render."
     )
 
 
